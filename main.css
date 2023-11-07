@@ -14,9 +14,14 @@ h1{
     text-align: center;
 }
 header{
+    position: relative;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+}
+.wyszukiwarka{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 .wyszukiwarka-pole{
@@ -25,11 +30,25 @@ header{
     border-radius: 24px;
     padding: 8px;
     font-size: 20px;
+    margin: 0 8px;
 }
 .wyszukiwarka-button{
-    background: transparent;
+    background-color: transparent;
     outline: none;
     border: 2px solid #000;
+    padding: 4px;
+    border-radius: 32px;
+    font-size: 36px !important;
+    transition: background-color 200ms;
+}
+.wyszukiwarka-button:hover{
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+}
+.koszyk{
+    position: absolute;
+    right: 0;
     font-size: 36px !important;
 }
 main{
