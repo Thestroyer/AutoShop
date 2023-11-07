@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Lis 07, 2023 at 02:58 PM
--- Wersja serwera: 10.4.28-MariaDB
--- Wersja PHP: 8.0.28
+-- Czas generowania: 07 Lis 2023, 15:19
+-- Wersja serwera: 10.4.27-MariaDB
+-- Wersja PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `samochody`
+-- Baza danych: `samochody`
 --
 
 -- --------------------------------------------------------
@@ -33,7 +33,7 @@ CREATE TABLE `marki` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `marki`
+-- Zrzut danych tabeli `marki`
 --
 
 INSERT INTO `marki` (`id`, `marka`) VALUES
@@ -42,7 +42,17 @@ INSERT INTO `marki` (`id`, `marka`) VALUES
 (3, 'Audi'),
 (4, 'Mercedes'),
 (5, 'Volkswagen'),
-(6, 'BMW');
+(6, 'BMW'),
+(7, 'Skoda'),
+(8, 'Ford'),
+(9, 'Fiat'),
+(10, 'Peugeot'),
+(11, 'Renault'),
+(12, 'Honda'),
+(13, 'Hyundai'),
+(14, 'Kia'),
+(15, 'Mazda'),
+(16, 'Nissan');
 
 -- --------------------------------------------------------
 
@@ -56,7 +66,7 @@ CREATE TABLE `modele` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `modele`
+-- Zrzut danych tabeli `modele`
 --
 
 INSERT INTO `modele` (`id`, `model`) VALUES
@@ -64,7 +74,17 @@ INSERT INTO `modele` (`id`, `model`) VALUES
 (2, 'Yaris'),
 (3, 'M5'),
 (4, 'Golf'),
-(5, 'Ibiza');
+(5, 'Ibiza'),
+(6, 'Octavia'),
+(7, 'Mustang'),
+(8, '500'),
+(9, '208'),
+(10, 'Clio'),
+(11, 'Civic'),
+(12, 'Tucson'),
+(13, 'Rio'),
+(14, 'MX-5'),
+(15, 'Micra');
 
 -- --------------------------------------------------------
 
@@ -78,7 +98,7 @@ CREATE TABLE `paliwa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `paliwa`
+-- Zrzut danych tabeli `paliwa`
 --
 
 INSERT INTO `paliwa` (`id`, `rodzaj_paliwa`) VALUES
@@ -108,6 +128,20 @@ CREATE TABLE `pojazdy` (
   `cena` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Zrzut danych tabeli `pojazdy`
+--
+
+INSERT INTO `pojazdy` (`id`, `marka`, `model`, `rok_produkcji`, `pojemnosc`, `przebieg`, `paliwo`, `moc`, `skrzynia_biegow`, `stan`, `cena`) VALUES
+(1, 1, 2, 2020, 1300, 15000, 1, 100, 2, 2, 50000),
+(2, 2, 5, 2019, 1400, 30000, 2, 90, 1, 2, 45000),
+(3, 3, 1, 2018, 2000, 45000, 5, 150, 2, 2, 65000),
+(24, 7, 11, 2020, 1600, 20000, 1, 115, 2, 2, 60000),
+(25, 8, 12, 2018, 5000, 30000, 2, 450, 1, 2, 200000),
+(26, 9, 13, 2017, 1400, 50000, 1, 69, 2, 2, 35000),
+(27, 10, 14, 2021, 1200, 10000, 1, 110, 2, 1, 70000),
+(28, 11, 15, 2019, 1500, 30000, 2, 90, 1, 2, 45000);
+
 -- --------------------------------------------------------
 
 --
@@ -120,7 +154,7 @@ CREATE TABLE `skrzynie` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `skrzynie`
+-- Zrzut danych tabeli `skrzynie`
 --
 
 INSERT INTO `skrzynie` (`id`, `rodzaj_skrzyni`) VALUES
@@ -139,7 +173,7 @@ CREATE TABLE `stan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `stan`
+-- Zrzut danych tabeli `stan`
 --
 
 INSERT INTO `stan` (`id`, `stan`) VALUES
@@ -192,51 +226,51 @@ ALTER TABLE `stan`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT dla zrzuconych tabel
 --
 
 --
--- AUTO_INCREMENT for table `marki`
+-- AUTO_INCREMENT dla tabeli `marki`
 --
 ALTER TABLE `marki`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `modele`
+-- AUTO_INCREMENT dla tabeli `modele`
 --
 ALTER TABLE `modele`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `paliwa`
+-- AUTO_INCREMENT dla tabeli `paliwa`
 --
 ALTER TABLE `paliwa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `pojazdy`
+-- AUTO_INCREMENT dla tabeli `pojazdy`
 --
 ALTER TABLE `pojazdy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
--- AUTO_INCREMENT for table `skrzynie`
+-- AUTO_INCREMENT dla tabeli `skrzynie`
 --
 ALTER TABLE `skrzynie`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `stan`
+-- AUTO_INCREMENT dla tabeli `stan`
 --
 ALTER TABLE `stan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Constraints for dumped tables
+-- Ograniczenia dla zrzutów tabel
 --
 
 --
--- Constraints for table `pojazdy`
+-- Ograniczenia dla tabeli `pojazdy`
 --
 ALTER TABLE `pojazdy`
   ADD CONSTRAINT `marka_pojazdy` FOREIGN KEY (`marka`) REFERENCES `marki` (`id`),
