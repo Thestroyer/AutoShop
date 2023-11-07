@@ -25,10 +25,29 @@
             <input class="wyszukiwarka-pole">
             <button class="wyszukiwarka-button material-symbols-outlined">search</button>
         </div>
-        <div class="koszyk material-symbols-outlined">shopping_cart</div>
+        <button class="koszyk material-symbols-outlined">shopping_cart</button>
     </header>
     <main>
-        <section class="promocje"></section>
+        <section class="promocje">
+            <div class="card">
+                <div class="card-image"><img src="images/a2.jpg" alt="" srcset=""></div>
+                <div class="card-title">Audi A2</div>
+                <div class="card-price">60 000</div>
+                <div class="card-price-old">65 000</div>
+            </div>
+            <div class="card">
+                <div class="card-image"><img src="images/civic.jpg" alt="" srcset=""></div>
+                <div class="card-title">Honda Civic</div>
+                <div class="card-price">20 000</div>
+                <div class="card-price-old">25 000</div>
+            </div>
+            <div class="card">
+                <div class="card-image"><img src="images/micra.jpg" alt="" srcset=""></div>
+                <div class="card-title">Nissan Micra</div>
+                <div class="card-price">30 000</div>
+                <div class="card-price-old">35 000</div>
+            </div>
+        </section>
         <section class="ogloszenia"></section>
     </main>
 </body>
