@@ -1,3 +1,7 @@
+<?php
+include "footer.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,5 +34,6 @@
         <section class="promocje"></section>
         <section class="ogloszenia"></section>
     </main>
+    <?php footer(); ?>
 </body>
 </html>
