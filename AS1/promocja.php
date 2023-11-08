@@ -5,7 +5,7 @@ $username = 'root';
 $password = NULL;
 $database = 'samochody';
 
-$mysqli = mysqli_connect($hostname, $username, $password, $daatabase);
+$mysqli = mysqli_connect($hostname, $username, $password, $database);
 
 $query = "SELECT ";
 
