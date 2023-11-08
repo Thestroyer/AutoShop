@@ -1,6 +1,7 @@
 <?php
-include("./parts/headerBanner.php"); // HEADER
-include("./parts/footer.php"); // FOOTER
+include_once('./parts/headerBanner.php'); // HEADER
+include_once('./parts/promocje.php'); // PROMOCJE
+include_once('./parts/footer.php'); // FOOTER
 ?>
 
 <!DOCTYPE html>

@@ -1,5 +1,6 @@
 <?php
-include "footer.php";
+include_once "footer.php";
+include_once "promocje.php";
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +34,8 @@ include "footer.php";
     </header>
     <main>
         <section class="promocje">
-            <div class="card">
+            <?php promocje() ?>
+            <!-- <div class="card">
                 <div class="card-image"><img src="images/a2.jpg" alt="" srcset=""></div>
                 <div class="card-title">Audi A2</div>
                 <div class="card-price">60 000</div>
@@ -50,10 +52,10 @@ include "footer.php";
                 <div class="card-title">Nissan Micra</div>
                 <div class="card-price">30 000</div>
                 <div class="card-price-old">35 000</div>
-            </div>
+            </div> -->
         </section>
         <section class="ogloszenia"></section>
     </main>
-    <?php footer(); ?>
+    <?php footer() ?>
 </body>
 </html>
