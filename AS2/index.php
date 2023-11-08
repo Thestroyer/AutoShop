@@ -29,41 +29,62 @@ include("./parts/footer.php"); // FOOTER
 <body>
     <?php headerBanner(); ?>
 
-
-
     <main>
         <section class="promocje">
-            <div class="card">
-                <div class="card-image"><img src="images/a2.jpg" alt="" srcset=""></div>
-                <div class="card-title">Audi A2</div>
-                <div class="card-price">60 000</div>
-                <div class="card-price-old">65 000</div>
+            <div>
+                <h2>Promocje</h2>
             </div>
-            <div class="card">
-                <div class="card-image"><img src="images/civic.jpg" alt="" srcset=""></div>
-                <div class="card-title">Honda Civic</div>
-                <div class="card-price">20 000</div>
-                <div class="card-price-old">25 000</div>
-            </div>
-            <div class="card">
-                <div class="card-image"><img src="images/micra.jpg" alt="" srcset=""></div>
-                <div class="card-title">Nissan Micra</div>
-                <div class="card-price">30 000</div>
-                <div class="card-price-old">35 000</div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-image"><img src="images/a2.jpg" class="cars" alt="" srcset=""></div>
+                    <div class='card-opis'>
+                        <div class="card-title">
+                            <p>Audi A2</p>
+                        </div>
+                        <div class="card-price-old">
+                            <p>65 000 PLN</p>
+                        </div>
+                        <div class="card-price">
+                            <p>60 000 PLN</p>
+                        </div>
+                        <div class="img-sale"><img src="images/sale.png" class="sale" alt="" srcset=""></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image"><img src="images/civic.jpg" class="cars" alt="" srcset=""></div>
+                    <div class='card-opis'>
+                        <div class="card-title">
+                            <p>Honda Civic</p>
+                        </div>
+                        <div class="card-price-old">
+                            <p>25 000 PLN</p>
+                        </div>
+                        <div class="card-price">
+                            <p>20 000 PLN</p>
+                        </div>
+                        <div class="img-sale"><img src="images/sale.png" class="sale" alt="" srcset=""></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image"><img src="images/micra.jpg" class="cars" alt="" srcset=""></div>
+                    <div class='card-opis'>
+                        <div class="card-title">
+                            <p>Nissan Micra</p>
+                        </div>
+                        <div class="card-price-old">
+                            <p>35 000 PLN</p>
+                        </div>
+                        <div class="card-price">
+                            <p>30 000 PLN</p>
+                        </div>
+                        <div class="img-sale"><img src="images/sale.png" class="sale" alt="" srcset=""></div>
+                    </div>
+                </div>
             </div>
         </section>
+
         <section class="ogloszenia"></section>
-        <section>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo modi cum ad nemo natus vel alias a accusamus, praesentium totam. Ipsam, eos iusto voluptatum veritatis magni repellat natus sunt quam!</p>
-        </section>
-
-        <section>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo modi cum ad nemo natus vel alias a accusamus, praesentium totam. Ipsam, eos iusto voluptatum veritatis magni repellat natus sunt quam!</p>
-        </section>
-
-        <section>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo modi cum ad nemo natus vel alias a accusamus, praesentium totam. Ipsam, eos iusto voluptatum veritatis magni repellat natus sunt quam!</p>
-        </section>
     </main>
 
     <?php footer(); ?>

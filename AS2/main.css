@@ -1,3 +1,8 @@
+:root {
+    --main-color1: #26a1ff;
+    --main-color2: #6e26ff;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -9,12 +14,13 @@ body {
 }
 
 /*** INPUT, BUTTON ***/
-input, button{
+input,
+button {
     user-select: none;
 }
 
 /*** MAIN ***/
-main{
+main {
     margin: 100px 0 100px 0;
     display: flex;
     flex-direction: column;
@@ -22,31 +28,21 @@ main{
 }
 
 /*** SECTION ***/
-section{
-    width: 80%;
-}
+section {}
 
-/*** SECTION - PROMOCJE ***/
-.promocje{
-    display: flex;
-    gap: 16px;
-}
-.card{
-    width: 200px;
-    height: 300px;
-    border: 1px solid black;
-}
-.card-image img{
-    width: 100%;
-    flex-shrink: 8;
+/*** H2 ***/
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
 }
 
 /*** HEADER ***/
 header {
-    box-shadow: 0 0 8px 0px #222;
+    box-shadow: 0 0 8px 0px #000;
 }
 
-.headerTitle {
+.header-title {
     height: 72px;
     display: flex;
     align-items: center;
@@ -54,58 +50,58 @@ header {
     padding: 8px 0;
 }
 
-.headerTitle>hr {
+.header-title>hr {
     width: 100%;
     background-color: black;
 }
 
-.headerTitle>h1>a:any-link {
+.header-title>h1>a:any-link {
     color: transparent;
 }
 
-.headerTitle>h1 {
+.header-title>h1 {
     padding: 0 16px;
     font-size: 48px;
-    background: linear-gradient(45deg, #26a1ff, #6e26ff);
+    background: linear-gradient(45deg, var(--main-color1), var(--main-color2));
     -webkit-background-clip: text;
     color: transparent;
     text-shadow:
-        -16px -16px 72px #26a1ff,
-        16px 16px 72px #6e26ff;
+        -16px -16px 72px var(--main-color1),
+        16px 16px 72px var(--main-color2);
 }
 
-.headerMenu {
+.header-menu {
     height: 64px;
     display: flex;
     justify-content: center;
     padding: 0 0 8px 0;
 }
 
-.cart{
+.cart {
     position: absolute;
-    right: 16px;
+    right: 64px;
     display: flex;
     height: 72px;
     align-items: center;
 }
 
-.cartButton {
+.cart-button {
     background: transparent;
     border: none;
     font-size: 36px !important;
     height: 36px;
 }
 
-.cartButton:hover{
+.cart-button:hover {
     cursor: pointer;
 }
 
-.search{
+.search {
     display: flex;
     align-items: center;
 }
 
-.searchInput{
+.search-input {
     outline: none;
     border: 2px solid #000;
     border-radius: 24px;
@@ -113,7 +109,8 @@ header {
     font-size: 20px;
     margin: 0 8px;
 }
-.searchButton{
+
+.search-button {
     background-color: transparent;
     outline: none;
     border: 2px solid #000;
@@ -122,7 +119,8 @@ header {
     font-size: 32px !important;
     transition: background-color 200ms;
 }
-.searchButton:hover{
+
+.search-button:hover {
     color: #fff;
     background-color: #000;
     cursor: pointer;
@@ -136,4 +134,74 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*** SECTION - PROMOCJE ***/
+.promocje {
+    width: 80%;
+}
+
+.cards {
+    margin-top: 50px;
+    display: flex;
+}
+
+.card {
+    justify-content: center;
+    margin: 0 20px 0 20px;
+    border: 2px solid black;
+    text-align: center;
+    transition: box-shadow .3s;
+    cursor: pointer;
+    border-radius: 16px;
+    position: relative;
+}
+
+.card-opis {
+    padding-bottom: 10px;
+}
+
+.card-price-old {
+    text-decoration: line-through;
+    font-size: 26px;
+}
+
+.card-price {
+    color: red;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.card-title {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.card:hover {
+    box-shadow:
+        -16px -16px 64px -24px var(--main-color1),
+        16px 16px 64px -24px var(--main-color2);
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(45deg, var(--main-color1), var(--main-color2)) border-box;
+    border-radius: 16px;
+    border: 2px solid transparent;
+}
+
+.card-image .cars {
+    width: 100%;
+    flex-shrink: 8;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom: 1px solid #999;
+}
+
+.sale {
+    width: 100px;
+}
+
+.img-sale {
+    width: 100px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
 }
