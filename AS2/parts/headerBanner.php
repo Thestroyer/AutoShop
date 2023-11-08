@@ -10,10 +10,14 @@ function headerBanner()
         </div>
 
         <div class='headerMenu'>
-            <button class='cart material-symbols-outlined'>shopping_cart</button>
-            
-            <input class='wyszukiwarka-pole'>
-            <button class='wyszukiwarka-button material-symbols-outlined'>search</button>
+            <div class='search'>
+                <input class='searchInput'>
+                <button class='searchButton material-symbols-outlined'>search</button>
+            </div>
+
+            <div class='cart'>
+                <button class='cartButton material-symbols-outlined'>shopping_cart</button>
+            </div>
         </div>
     </header>
     ";
