@@ -29,10 +29,7 @@ include "footer.php";
             <input class="wyszukiwarka-pole">
             <button class="wyszukiwarka-button material-symbols-outlined">search</button>
         </div>
-<<<<<<< HEAD
         <button class="koszyk material-symbols-outlined">shopping_cart</button>
-=======
->>>>>>> ad62b79916169a9d3e7c1e378b67d08462420370
     </header>
     <main>
         <section class="promocje">
