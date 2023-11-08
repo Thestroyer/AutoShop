@@ -10,6 +10,8 @@ include("./parts/footer.php"); // FOOTER
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Odwiedź AutoShop i odkryj bogatą ofertę samochodów nowych i używanych. Profesjonalne doradztwo, atrakcyjne ceny i gwarancja jakości. Znajdź swój wymarzony samochód już dziś!">
+    <meta name="keywords" content="AutoShop dealer samochodowy, samochody nowe AutoShop, samochody używane AutoShop, najlepszy dealer aut, auta na sprzedaż, zakup samochodów, oferty samochodów nowych, oferty samochodów używanych, salon samochodowy AutoShop, finansowanie aut AutoShop, AutoShop serwis samochodowy, jazda próbna AutoShop, promocje dealer samochodowy, gwarancja na samochody AutoShop, AutoShop części zamienne, akcesoria samochodowe AutoShop, doradztwo w zakupie auta, AutoShop opinie klientów, bezpieczny zakup samochodu">
     <title>AutoShop</title>
 
     <!-- Internal links -->
