@@ -35,9 +35,9 @@ include_once('./parts/footer.php'); // FOOTER
             <div>
                 <h2>Promocje</h2>
             </div>
-
             <div class="cards">
-                <div class="card">
+                <?php promocje() ?>
+                <!-- <div class="card">
                     <div class="card-image"><img src="images/a2.jpg" class="cars" alt="" srcset=""></div>
                     <div class='card-opis'>
                         <div class="card-title">
@@ -81,7 +81,7 @@ include_once('./parts/footer.php'); // FOOTER
                         </div>
                         <div class="img-sale"><img src="images/sale.png" class="sale" alt="" srcset=""></div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
