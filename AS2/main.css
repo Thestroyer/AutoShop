@@ -141,6 +141,11 @@ footer {
     width: 80%;
 }
 
+.ogloszenia {
+    margin-top: 2%;
+    width: 80%;
+}
+
 .cards {
     margin-top: 50px;
     display: flex;
@@ -166,7 +171,7 @@ footer {
     font-size: 26px;
 }
 
-.card-price {
+.card-price-new {
     color: red;
     font-weight: bold;
     font-size: 36px;
@@ -175,6 +180,17 @@ footer {
 .card-title {
     font-size: 36px;
     font-weight: bold;
+}
+
+.card-title-small {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card-price-small {
+    font-size: 30px;
+    font-weight: bold;
+    color: gray;
 }
 
 .card:hover {
