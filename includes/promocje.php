@@ -7,7 +7,7 @@ function promocje(){
 
     $conn = mysqli_connect($hostname, $username, $password, $database);
     $query = '
-        SELECT marki.marka AS `marka`, modele.model AS `model`, cena, nowa_cena, zdjecie
+        SELECT pojazdy.id AS `id`, marki.marka AS `marka`, modele.model AS `model`, cena, nowa_cena, zdjecie
         FROM `marki`, `modele`, `pojazdy`, `promocje`
         WHERE marki.id = pojazdy.marka
         AND modele.id = pojazdy.model
@@ -18,7 +18,7 @@ function promocje(){
 
     while($row = mysqli_fetch_assoc($results)){
 
-        $out = '<div class="card">';
+        $out = '<a class="card" href="ogloszenie.php?id=' . $row['id'] . '">';
         $out .= '<div class="card-image"><img src="images/' . $row['zdjecie'] . '" class="cars"></div>';
         $out .= '<div class="card-opis">';
         $out .= '<div class="card-title"><p>' . $row['marka'] . ' ' . $row['model'] . '</p></div>';
@@ -26,7 +26,7 @@ function promocje(){
         $out .= '<div class="card-price-new"><p>' . $row['nowa_cena'] . ' PLN</p></div>';
         $out .= '<div class="img-sale"><img src="images/sale.png" class="sale"></div>';
         $out .= '</div>';
-        $out .= '</div>';
+        $out .= '</a>';
         echo $out;
     }
 
