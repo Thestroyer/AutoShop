@@ -1,6 +1,7 @@
 <?php
-include("./parts/headerBanner.php"); // HEADER
-include("./parts/footer.php"); // FOOTER
+include_once('./parts/headerBanner.php'); // HEADER
+include_once('./parts/promocje.php'); // PROMOCJE
+include_once('./parts/footer.php'); // FOOTER
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +37,8 @@ include("./parts/footer.php"); // FOOTER
             </div>
 
             <div class="cards">
-                <div class="card">
+                <?php promocje() ?>
+                <!-- <div class="card">
                     <div class="card-image"><img src="images/a2.jpg" class="cars" alt="" srcset=""></div>
                     <div class='card-opis'>
                         <div class="card-title">
@@ -80,7 +82,7 @@ include("./parts/footer.php"); // FOOTER
                         </div>
                         <div class="img-sale"><img src="images/sale.png" class="sale" alt="" srcset=""></div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
