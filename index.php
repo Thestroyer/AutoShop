@@ -1,6 +1,7 @@
 <?php
 include_once('./parts/headerBanner.php'); // HEADER
 include_once('./parts/promocje.php'); // PROMOCJE
+include_once('./parts/ogloszenia.php'); // OGŁOSZENIA
 include_once('./parts/footer.php'); // FOOTER
 ?>
 
@@ -92,7 +93,8 @@ include_once('./parts/footer.php'); // FOOTER
             </div>
 
         <div class="cards">
-                <div class="card">
+            <?php ogloszenia() ?>
+                <!-- <div class="card">
                     <div class="card-image"><img src="images/ibiza.jpg" class="cars" alt="" srcset=""></div>
                     <div class='card-opis'>
                         <div class="card-title-small">
@@ -146,7 +148,7 @@ include_once('./parts/footer.php'); // FOOTER
                             <p>50 000 PLN</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>

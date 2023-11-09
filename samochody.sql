@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1deb5ubuntu1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Lis 07, 2023 at 04:03 PM
--- Wersja serwera: 10.4.28-MariaDB
--- Wersja PHP: 8.0.28
+-- Host: localhost:3306
+-- Generation Time: Nov 09, 2023 at 12:22 AM
+-- Server version: 8.0.35-0ubuntu0.22.04.1
+-- PHP Version: 8.1.2-1ubuntu2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,12 +24,12 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `marki`
+-- Table structure for table `marki`
 --
 
 CREATE TABLE `marki` (
-  `id` int(11) NOT NULL,
-  `marka` varchar(50) NOT NULL
+  `id` int NOT NULL,
+  `marka` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -57,12 +57,12 @@ INSERT INTO `marki` (`id`, `marka`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `modele`
+-- Table structure for table `modele`
 --
 
 CREATE TABLE `modele` (
-  `id` int(11) NOT NULL,
-  `model` varchar(50) NOT NULL
+  `id` int NOT NULL,
+  `model` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -89,12 +89,12 @@ INSERT INTO `modele` (`id`, `model`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `paliwa`
+-- Table structure for table `paliwa`
 --
 
 CREATE TABLE `paliwa` (
-  `id` int(11) NOT NULL,
-  `rodzaj_paliwa` varchar(50) NOT NULL
+  `id` int NOT NULL,
+  `rodzaj_paliwa` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -111,47 +111,48 @@ INSERT INTO `paliwa` (`id`, `rodzaj_paliwa`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `pojazdy`
+-- Table structure for table `pojazdy`
 --
 
 CREATE TABLE `pojazdy` (
-  `id` int(11) NOT NULL,
-  `marka` int(11) DEFAULT NULL,
-  `model` int(11) DEFAULT NULL,
-  `rok_produkcji` int(11) DEFAULT NULL,
-  `pojemnosc` int(11) DEFAULT NULL,
-  `przebieg` int(11) DEFAULT NULL,
-  `paliwo` int(11) DEFAULT NULL,
-  `moc` int(11) DEFAULT NULL,
-  `skrzynia_biegow` int(11) DEFAULT NULL,
-  `stan` int(11) DEFAULT NULL,
-  `cena` int(11) DEFAULT NULL
+  `id` int NOT NULL,
+  `marka` int DEFAULT NULL,
+  `model` int DEFAULT NULL,
+  `rok_produkcji` int DEFAULT NULL,
+  `pojemnosc` int DEFAULT NULL,
+  `przebieg` int DEFAULT NULL,
+  `paliwo` int DEFAULT NULL,
+  `moc` int DEFAULT NULL,
+  `skrzynia_biegow` int DEFAULT NULL,
+  `stan` int DEFAULT NULL,
+  `zdjecie` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `cena` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pojazdy`
 --
 
-INSERT INTO `pojazdy` (`id`, `marka`, `model`, `rok_produkcji`, `pojemnosc`, `przebieg`, `paliwo`, `moc`, `skrzynia_biegow`, `stan`, `cena`) VALUES
-(1, 1, 2, 2020, 1300, 15000, 1, 100, 2, 2, 50000),
-(2, 2, 5, 2019, 1400, 30000, 2, 90, 1, 2, 45000),
-(3, 3, 1, 2018, 2000, 45000, 5, 150, 2, 2, 65000),
-(24, 12, 11, 2020, 1600, 20000, 1, 115, 2, 2, 60000),
-(25, 13, 12, 2018, 5000, 30000, 2, 450, 1, 2, 200000),
-(26, 14, 13, 2017, 1400, 50000, 1, 69, 2, 2, 35000),
-(27, 15, 14, 2021, 1200, 10000, 1, 110, 2, 1, 70000),
-(28, 16, 15, 2019, 1500, 30000, 2, 90, 1, 2, 45000);
+INSERT INTO `pojazdy` (`id`, `marka`, `model`, `rok_produkcji`, `pojemnosc`, `przebieg`, `paliwo`, `moc`, `skrzynia_biegow`, `stan`, `zdjecie`, `cena`) VALUES
+(1, 1, 2, 2020, 1300, 15000, 1, 100, 2, 2, 'yaris.jpg', 50000),
+(2, 2, 5, 2019, 1400, 30000, 2, 90, 1, 2, 'ibiza.jpg', 45000),
+(3, 3, 1, 2018, 2000, 45000, 5, 150, 2, 2, 'a2.jpg', 65000),
+(24, 12, 11, 2020, 1600, 20000, 1, 115, 2, 2, 'civic.jpg', 60000),
+(25, 13, 12, 2018, 5000, 30000, 2, 450, 1, 2, 'tucson.jpg', 200000),
+(26, 14, 13, 2017, 1400, 50000, 1, 69, 2, 2, 'rio.jpg', 35000),
+(27, 15, 14, 2021, 1200, 10000, 1, 110, 2, 1, 'mx5.jpg', 70000),
+(28, 16, 15, 2019, 1500, 30000, 2, 90, 1, 2, 'micra.jpg', 45000);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `promocje`
+-- Table structure for table `promocje`
 --
 
 CREATE TABLE `promocje` (
-  `id` int(11) NOT NULL,
-  `id_pojazdu` int(11) NOT NULL,
-  `nowa_cena` int(11) NOT NULL,
+  `id` int NOT NULL,
+  `id_pojazdu` int NOT NULL,
+  `nowa_cena` int NOT NULL,
   `zakonczenie` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -167,12 +168,12 @@ INSERT INTO `promocje` (`id`, `id_pojazdu`, `nowa_cena`, `zakonczenie`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `skrzynie`
+-- Table structure for table `skrzynie`
 --
 
 CREATE TABLE `skrzynie` (
-  `id` int(11) NOT NULL,
-  `rodzaj_skrzyni` varchar(20) NOT NULL
+  `id` int NOT NULL,
+  `rodzaj_skrzyni` varchar(20) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -186,12 +187,12 @@ INSERT INTO `skrzynie` (`id`, `rodzaj_skrzyni`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `stan`
+-- Table structure for table `stan`
 --
 
 CREATE TABLE `stan` (
-  `id` int(11) NOT NULL,
-  `stan` varchar(30) NOT NULL
+  `id` int NOT NULL,
+  `stan` varchar(30) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -203,29 +204,29 @@ INSERT INTO `stan` (`id`, `stan`) VALUES
 (2, 'używany');
 
 --
--- Indeksy dla zrzutów tabel
+-- Indexes for dumped tables
 --
 
 --
--- Indeksy dla tabeli `marki`
+-- Indexes for table `marki`
 --
 ALTER TABLE `marki`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeksy dla tabeli `modele`
+-- Indexes for table `modele`
 --
 ALTER TABLE `modele`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeksy dla tabeli `paliwa`
+-- Indexes for table `paliwa`
 --
 ALTER TABLE `paliwa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeksy dla tabeli `pojazdy`
+-- Indexes for table `pojazdy`
 --
 ALTER TABLE `pojazdy`
   ADD PRIMARY KEY (`id`),
@@ -236,20 +237,20 @@ ALTER TABLE `pojazdy`
   ADD KEY `stan_pojazdy` (`stan`);
 
 --
--- Indeksy dla tabeli `promocje`
+-- Indexes for table `promocje`
 --
 ALTER TABLE `promocje`
   ADD PRIMARY KEY (`id`),
   ADD KEY `pojazdy_promocje` (`id_pojazdu`);
 
 --
--- Indeksy dla tabeli `skrzynie`
+-- Indexes for table `skrzynie`
 --
 ALTER TABLE `skrzynie`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeksy dla tabeli `stan`
+-- Indexes for table `stan`
 --
 ALTER TABLE `stan`
   ADD PRIMARY KEY (`id`);
@@ -262,43 +263,43 @@ ALTER TABLE `stan`
 -- AUTO_INCREMENT for table `marki`
 --
 ALTER TABLE `marki`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `modele`
 --
 ALTER TABLE `modele`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `paliwa`
 --
 ALTER TABLE `paliwa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `pojazdy`
 --
 ALTER TABLE `pojazdy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `promocje`
 --
 ALTER TABLE `promocje`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `skrzynie`
 --
 ALTER TABLE `skrzynie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `stan`
 --
 ALTER TABLE `stan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
