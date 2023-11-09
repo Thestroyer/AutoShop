@@ -19,11 +19,11 @@ function ogloszenia(){
 
     while($row = mysqli_fetch_assoc($results)){
 
-        $out = '<a class="card" href="ogloszenie.php?id=' . $row['id'] . '">';
-        $out .= '<div class="card-image"><img src="images/' . $row['zdjecie'] . '" class="cars"></div>';
-        $out .= '<div class="card-opis">';
-        $out .= '<div class="card-title-small"><p>' . $row['marka'] . ' ' . $row['model'] . '</p></div>';
-        $out .= '<div class="card-price-small"><p>' . $row['cena'] . ' PLN</p></div>';
+        $out = '<a class="ogloszenia-card" href="ogloszenie.php?id=' . $row['id'] . '">';
+        $out .= '<div class="ogloszenia-card-image"><img src="images/' . $row['zdjecie'] . '" class="ogloszenia-cars"></div>';
+        $out .= '<div class="ogloszenia-card-opis">';
+        $out .= '<div class="ogloszenia-card-title-small"><p>' . $row['marka'] . ' ' . $row['model'] . '</p></div>';
+        $out .= '<div class="ogloszenia-card-price-small"><p>' . $row['cena'] . ' PLN</p></div>';
         $out .= '</div>';
         $out .= '</a>';
         echo $out;

@@ -18,12 +18,12 @@ function promocje(){
 
     while($row = mysqli_fetch_assoc($results)){
 
-        $out = '<a class="card" href="ogloszenie.php?id=' . $row['id'] . '">';
-        $out .= '<div class="card-image"><img src="images/' . $row['zdjecie'] . '" class="cars"></div>';
-        $out .= '<div class="card-opis">';
-        $out .= '<div class="card-title"><p>' . $row['marka'] . ' ' . $row['model'] . '</p></div>';
-        $out .= '<div class="card-price-old"><p>' . $row['cena'] . ' PLN</p></div>';
-        $out .= '<div class="card-price-new"><p>' . $row['nowa_cena'] . ' PLN</p></div>';
+        $out = '<a class="promocje-card" href="ogloszenie.php?id=' . $row['id'] . '">';
+        $out .= '<div class="promocje-card-image"><img src="images/' . $row['zdjecie'] . '" class="promocje-cars"></div>';
+        $out .= '<div class="promocje-card-opis">';
+        $out .= '<div class="promocje-card-title"><p>' . $row['marka'] . ' ' . $row['model'] . '</p></div>';
+        $out .= '<div class="promocje-card-price-old"><p>' . $row['cena'] . ' PLN</p></div>';
+        $out .= '<div class="promocje-card-price-new"><p>' . $row['nowa_cena'] . ' PLN</p></div>';
         $out .= '<div class="img-sale"><img src="images/sale.png" class="sale"></div>';
         $out .= '</div>';
         $out .= '</a>';

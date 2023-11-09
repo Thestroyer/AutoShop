@@ -37,7 +37,7 @@ include_once('./includes/footer.php'); // FOOTER
                 <h2>Promocje</h2>
             </div>
 
-            <div class="cards">
+            <div class="promocje-cards">
                 <?php promocje() ?>
                 <!-- <div class="card">
                     <div class="card-image"><img src="images/a2.jpg" class="cars" alt="" srcset=""></div>
@@ -92,8 +92,8 @@ include_once('./includes/footer.php'); // FOOTER
                 <h2>Ogłoszenia</h2>
             </div>
 
-        <div class="cards">
-            <?php ogloszenia() ?>
+            <div class="ogloszenia-cards">
+                <?php ogloszenia() ?>
                 <!-- <div class="card">
                     <div class="card-image"><img src="images/ibiza.jpg" class="cars" alt="" srcset=""></div>
                     <div class='card-opis'>
