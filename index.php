@@ -1,8 +1,8 @@
 <?php
-include_once('./parts/headerBanner.php'); // HEADER
-include_once('./parts/promocje.php'); // PROMOCJE
-include_once('./parts/ogloszenia.php'); // OGŁOSZENIA
-include_once('./parts/footer.php'); // FOOTER
+include_once('./includes/headerBanner.php'); // HEADER
+include_once('./includes/promocje.php'); // PROMOCJE
+include_once('./includes/ogloszenia.php'); // OGŁOSZENIA
+include_once('./includes/footer.php'); // FOOTER
 ?>
 
 <!DOCTYPE html>

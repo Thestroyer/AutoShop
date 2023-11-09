@@ -22,8 +22,8 @@ function promocje(){
         $out .= '<div class="card-image"><img src="images/' . $row['zdjecie'] . '" class="cars"></div>';
         $out .= '<div class="card-opis">';
         $out .= '<div class="card-title"><p>' . $row['marka'] . ' ' . $row['model'] . '</p></div>';
-        $out .= '<div class="card-price-old"><p>' . $row['cena'] . '</p></div>';
-        $out .= '<div class="card-price-new"><p>' . $row['nowa_cena'] . '</p></div>';
+        $out .= '<div class="card-price-old"><p>' . $row['cena'] . ' PLN</p></div>';
+        $out .= '<div class="card-price-new"><p>' . $row['nowa_cena'] . ' PLN</p></div>';
         $out .= '<div class="img-sale"><img src="images/sale.png" class="sale"></div>';
         $out .= '</div>';
         $out .= '</div>';

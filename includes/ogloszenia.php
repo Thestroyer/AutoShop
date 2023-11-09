@@ -23,7 +23,7 @@ function ogloszenia(){
         $out .= '<div class="card-image"><img src="images/' . $row['zdjecie'] . '" class="cars"></div>';
         $out .= '<div class="card-opis">';
         $out .= '<div class="card-title-small"><p>' . $row['marka'] . ' ' . $row['model'] . '</p></div>';
-        $out .= '<div class="card-price-small"><p>' . $row['cena'] . '</p></div>';
+        $out .= '<div class="card-price-small"><p>' . $row['cena'] . ' PLN</p></div>';
         $out .= '</div>';
         $out .= '</div>';
         echo $out;
